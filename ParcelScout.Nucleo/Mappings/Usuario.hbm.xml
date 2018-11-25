@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="ParcelScout.Nucleo" assembly="ParcelScout.Nucleo">
+  <class name="ParcelScout.Nucleo.Entidades.Usuario, ParcelScout.Nucleo" table="usuario" lazy="false">
+    <id name="Id" type="int">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="Nombre" type="string">
+      <column name="nombre"/>
+    </property>
+    <property name="Correo" type="string">
+      <column name="correo"/>
+    </property>
+    <property name="Cuenta" type="string">
+      <column name="cuenta"/>
+    </property>
+    <property name="Password" type="string">
+      <column name="password"/>
+    </property>
+    <property name="Rol" type="string">
+      <column name="rol"/>
+    </property>
+  </class>
+</hibernate-mapping>

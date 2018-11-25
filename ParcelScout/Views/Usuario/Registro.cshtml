@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Registro";
+}
+
+
+
+<div class="row">
+
+    <div id="registro-form" class="form-principal
+                        col-xs-10 col-xs-push-1
+                        col-sm-5 col-sm-push-6
+                        col-md-3 col-md-push-8">
+
+        <div class="row">
+            <div class="form-header">&nbsp;+ Nuevo Usuario</div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <form action="registrar()" class="col-xs-10 col-xs-push-1">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control input-sm" name="nombre" id="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="cuenta">Cuenta:</label>
+                    <input type="text" class="form-control input-sm" name="cuenta" id="cuenta">
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" class="form-control input-sm" name="correo" id="correo">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" class="form-control input-sm" name="password" id="password">
+                </div>
+                <div class="form-group">
+                    <label for="comprobacion">Comprobar contraseña:</label>
+                    <input type="password" class="form-control input-sm" name="comprobacion" id="comprobacion">
+                </div>
+                <div class="form-group">
+                    <label for="permisos">Permisos:&nbsp;</label><select class="form-control" name="permisos" id="permiso">
+                        <option value="solo_lectura">Solo Lectura</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn btn-seagreen shadow" onclick="registrar()">Registrar</button>
+            </form>
+
+        </div>
+
+        <br>
+        
+    </div>
+
+    <!--ROW END-->
+</div>

@@ -1,0 +1,122 @@
+﻿:root {
+    --light-sienna: #c66435;
+    --light-seagreen: #33a364;
+    /*--fuente-principal: 'Open Sans','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    --fuente-principal: 'Merriweather Sans', 'Open Sans', Segoe UI, sans-serif;
+    --altura-nav: 55px;
+ 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-principal);
+}
+
+.container-fluid {
+    margin-top: var(--altura-nav);
+
+    background-image: url("../img/warehouse1.jpg");
+    background-size: cover;
+
+}
+
+/*NAVIGATION*/
+nav {
+    background-color: var(--light-sienna);
+    height: var(--altura-nav);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.30);
+    padding-right:15px;
+}
+
+#logo {
+    font-family: 'Pacifico', 'Segoe UI', sans-serif;
+    font-size: 30px;
+    color: black;
+}
+
+#nav-btn-container {
+    height: var(--altura-nav);
+    padding-right: 20px;
+}
+
+/*FORMS*/
+.form-principal {
+    font-family: var(--fuente-principal);
+    border: 2px solid #685a52;
+    border-radius: 8px 8px 8px 8px;
+    overflow: hidden;
+    z-index: 10;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .3), 5px 0 9px rgba(0, 0, 0, .10);
+}
+
+
+
+.form-header {
+    font-family: var(--fuente-principal);
+    font-size: 20px;
+    line-height: 2em;
+    height: 2em;
+    width: 100%;
+    background-color: var(--light-sienna);
+    color: white;
+    border-bottom: 2px solid sienna;
+    /*border-radius: 8px 8px 0px 0px;*/
+}
+
+.modal-header-sienna {
+    color: #fff;
+    padding: 9px 15px;
+    border-bottom: 1px solid #eee;
+    background-color: var(--light-sienna);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+
+#login-form {
+    margin-top: 20vh;
+    height: 50vh;
+    min-height: 275px;
+}
+
+#registro-form {
+    margin-top: 10vh;
+
+}
+
+form input {
+    width: 100%;
+}
+
+/*CUSTOM BUTTONS*/
+.btn-seagreen {
+    background-color: var(--light-seagreen );
+    color: white;
+    font-family: var(--fuente-principal);
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn-sienna {
+    background-color: var(--light-sienna);
+    color: white;
+    font-family: var(--fuente-principal);
+    font-size: 16px;
+}
+
+#boton-login {
+   height: 70%;
+}
+
+/*DATATABLE*/
+table.dataTable tbody > tr.selected, table.dataTable tbody > tr > .selected {
+    background-color: var(--light-seagreen);
+}
+
+pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    
+    background-color: var(--light-seagreen);
+    border-color: #337ab7;
+}

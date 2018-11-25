@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="ParcelScout.Nucleo" assembly="ParcelScout.Nucleo">
+  <class name="ParcelScout.Nucleo.Entidades.Envio, ParcelScout.Nucleo" table="envio" lazy="false">
+    <id name="Id" type="int">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="Folio" type="string">
+      <column name="folio"/>
+    </property>
+    
+    <property name="FechaCreacion" type="DateTime">
+      <column name="fecha_creacion"/>
+    </property>
+
+    <many-to-one name="Empleado" cascade="all-delete-orphan" class="ParcelScout.Nucleo.Entidades.Usuario, ParcelScout.Nucleo">
+      <column name="usuario_id" />
+    </many-to-one>
+    
+    <property name="Peso" type="double">
+      <column name="peso"/>
+    </property>
+    <property name="TipoContenido" type="string">
+      <column name="tipo_contenido"/>
+    </property>
+    <property name="Descripcion" type="string">
+      <column name="descripcion"/>
+    </property>
+    <property name="Precio" type="double">
+      <column name="precio"/>
+    </property>
+    <property name="NoRastreo" type="string">
+      <column name="no_rastreo"/>
+    </property>
+
+    <many-to-one name="Cliente" cascade="all-delete-orphan" class="ParcelScout.Nucleo.Entidades.Cliente, ParcelScout.Nucleo">
+      <column name="cliente_id" />
+    </many-to-one>
+
+    <many-to-one name="Destinatario" cascade="all-delete-orphan" class="ParcelScout.Nucleo.Entidades.Destinatario, ParcelScout.Nucleo">
+      <column name="destinatario_id" />
+    </many-to-one>
+
+    <property name="Estado" type="ParcelScout.Nucleo.Entidades.Estado, ParcelScout.Nucleo">
+      <column name="estado"/>
+    </property>
+
+
+  </class>
+</hibernate-mapping>

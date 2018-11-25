@@ -1,0 +1,49 @@
+﻿<nav class="navbar navbar-fixed-top">
+
+        
+    <div class="container">
+        <div class="navbar-header">
+            <a id="logo" href="" class="navbar-brand">
+                ParcelScout
+            </a>
+        </div>
+
+       
+        @if (Session["usuario-id"] == null)
+        {
+
+
+                <ul class="nav nav-pills navbar-right" role="tablist">
+                    
+                    <li><a href="@Url.Action("Login", "Home")")" class="navbar-btn btn-seagreen">Login</a></li>
+
+                </ul>
+
+              
+        }
+        else
+        {
+            <ul class="nav nav-pills navbar-right" role="tablist">
+                <li><a class="navbar-btn btn-sienna" href="#">Paquetería</a></li>
+                <li><a class="navbar-btn btn-sienna" href="#">Clientes</a></li>
+                
+                @if ((string)Session["usuario-rol"] == "admin")
+                {
+                    <li><a class="navbar-btn btn-sienna" href="@Url.Action("GestionUsuarios", "Usuario")">Usuarios</a></li>
+                } 
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle btn-seagreen navbar-btn" data-toggle="dropdown" href="#">
+                        @Session["usuario-nombre"] <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="@Url.Action("LogOut", "Home")">Salir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        }
+    </div>
+       
+
+</nav>
+

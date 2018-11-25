@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    
+    
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="@Url.Content("~/Content/bootstrap.min.css")"/>
+
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans|Open+Sans|Pacifico" rel="stylesheet"> 
+
+    <!--BASE DIRECTORY REF-->
+    <script type="text/javascript">
+        var baseUrl = "@Url.Content("~")";
+    </script>
+    
+    
+    @Scripts.Render("~/bundles/jquery")
+   
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+   
+
+    <!--SWEET ALERT CDN-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.18/af-2.3.2/b-1.5.4/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.css" />
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.18/af-2.3.2/b-1.5.4/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.js"></script>
+
+    <!--CUSTOM SYLE-->
+    @Styles.Render("~/Content/style_custom.css")
+
+    <!--DATATABLES
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf-6.4.3/dt-1.10.18/b-1.5.4/sl-1.2.6/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/zf-6.4.3/dt-1.10.18/b-1.5.4/sl-1.2.6/datatables.min.js"></script>
+    -->
+</head>
+<body>
+
+    <!--MAIN-->
+    <div class="container-fluid">
+        
+        @Html.Partial("~/Views/Shared/Navbar.cshtml")
+
+        @RenderBody()
+    </div>
+
+
+
+    <!--CUSTOM JS-->
+    @Scripts.Render("~/Scripts/js/usuario.js")
+
+   
+        
+</body>
+</html>
