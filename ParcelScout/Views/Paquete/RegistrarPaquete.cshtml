@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "RegistrarPaquete";
+}
+
+<div>
+    <h2>Agregar Paquente</h2>
+
+    <!--
+        Los campos que se generaran de manera automica son los de:
+           id:
+           folio:
+           fecha de registro:
+           numero de rastreo:
+           Usuario que realizo el registro
+        -->
+
+    <br>
+
+    <form action="">
+        <div class="form-group">
+            <label for="peso">Peso (Kilogramos):</label>
+            <input type="text" class="form-control" name="peso">
+        </div>
+        <div class="form-group">
+            <label for="tipo">Tipo de paquete</label>
+            <input type="text" class="form-control" name="tipo">
+        </div>
+        <div class="from-group">
+            <label for="descripcion">Descripcion</label>
+            <input type="text" class="form-control" name="descripcion">
+        </div>
+        <div class="form-group">
+            <label for="precio">Precio</label>
+            <input type="text" class="form-control" name="precio">
+        </div>
+
+        <button lcass="btn btn-seagreen shadow" onclick=" return validarPaquete()">Registrar</button>
+    </form>
+</div>
+
+<script>
+    function validarPaquete() {
+        console.log('Entra al metodo validar');
+        var valido = true; //
+
+        //alert('Entra aqui');
+
+        //darFormatoFolio(2);
+
+        /*
+        var usuario;
+
+        var folio
+        var numeroRastreo;
+
+        var peso = $('input[name=peso]').val();
+        var tipo = $('input[name=tipo]').val();
+        var descripcion = $('input[name=descripcion]').val();
+        var precio = $('input[name=precio]').val();
+        var fecha;
+
+        if (peso === "") valido = false;
+        if (tipo === "") valido = false;
+        if (descripcion === "") valido = false;
+        if (precio === "") valido = false;
+
+        if (valido) {
+            if (!isNaN(peso))
+                if (!isNaN(precio)) {
+                    //Aquí se escribira todo el codigo en caso de que la validación haya sido exitosa
+
+                    var hoy = new Date();
+                    var dd = hoy.getDate();
+                    var mm = hoy.getMonth() + 1;
+                    var yyyy = hoy.getFullYear();
+
+                    fecha = yyyy.toString() + '/' + mm.toString() + '/' + dd.toString();
+
+                    //El folio se generara una vezz se tenga el Id
+
+
+                }
+                else alert('Ingrese un valor numerico en el campo de precio');
+            else alert('Ingrese un valor numerico en el campo de peso');
+
+        } else alert('Favor de llenar todos los campos');
+    */}
+
+    function darFormatoFolio(id) {
+        //Pendiente
+        alert('Entra');
+        //alert('El largo de id es de ' + id.length);
+        /*
+        alert('Entra');
+        var max = id.toString().length;
+        alert('Valor de Max es ' + max);
+        var aux = "";
+
+        for (i = 6 - max; i < 6; i++) { aux.concat('0'); alert('Valor de Max es ' + max);}
+        return new Date.getFullYear().toString() + aux +id.toString();*/
+    }
+</script>

@@ -48,6 +48,9 @@ namespace ParcelScout.Controllers
             return action;
         }
 
-
+        public ActionResult RegistrarPaquete()
+        {
+            return View();
+        }
     }
 }
